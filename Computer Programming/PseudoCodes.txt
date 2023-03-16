@@ -1,0 +1,525 @@
+BEGIN PROGRAM
+
+  DISPLAY "Hello World"
+  DISPLAY 2023
+
+END PROGRAM
+
+-----------------------
+
+BEGIN PROGRAM
+
+  Use Variable: a, b, sum, avg OF TYPE Integer
+  a := 7
+  b := 3
+  sum := a + b
+  avg := sum / 2
+  DISPLAY "Total= ", sum
+  DISPLAY "Average= ", avg
+
+END PROGRAM
+
+------------------------
+
+BEGIN PROGRAM 
+
+  Use Variable: a, b, sum, avg OF TYPE Integer 
+  DISPLAY "Enter a number: "
+  ACCEPT a 
+  DISPLAY "Enter another number: "
+  ACCEPT b
+  sum := a + b
+  avg := sum  / 2
+  DISPLAY "Total = ", sum
+  DISPLAY "Average = ", avg
+
+END PROGRAM
+
+--------------------------
+
+BEGIN PROGRAM 
+
+  Use Variable: name, address OF TYPE String
+  		age OF TYPE Integer
+  DISPLAY "Enter your name: "
+  ACCEPT name
+  DISPLAY "Enter your address: "
+  ACCEPT address
+  DISPLAY "Enter your age: "
+  ACCEPT age
+  DISPLAY "Name: ", name
+  DISPLAY "Address: ", address
+  DISPLAY "Age: ", age
+
+END PROGRAM 
+
+---------------------------
+
+BEGIN PROGRAM
+
+  Use Variable: mark OF TYPE Integer
+  DISPLAY "Enter your mark: "
+  ACCEPT mark
+  IF mark >= 40 THEN
+    DISPLAY "Pass"
+  END IF
+
+END PROGRAM
+
+----------------------------
+
+BEGIN PROGRAM
+  
+  Use Variable: mark OF TYPE Integer
+  DISPLAY "Enter your mark: "
+  ACCEPT mark
+  IF mark >= 40 THEN
+    DISPLAY "Pass"
+  ELSE
+    DISPLAY "Fail"
+  END IF
+
+END PROGRAM
+
+------------------------------
+
+BEGIN PROGRAM
+
+  Use Variable: mark OF TYPE Integer
+  DISPLAY "Enter your mark: "
+  ACCEPT mark
+  IF mark >= 80 THEN
+    DISPLAY "Distinction"
+  ELSE IF mark >= 65 THEN
+    DISPLAY "Credit"
+  ELSE IF mark >= 40 THEN
+    DISPLAY "Pass"
+  ELSE
+    DISPLAY "Fail"
+  END IF
+
+END PROGRAM
+
+-------------------------------
+
+BEGIN PROGRAM
+
+  Use Variable: mark OF TYPE Integer
+  DISPLAY "Enter your mark: "
+  ACCEPT mark
+  IF mark >= 80 and mark <= 100 THEN
+    DISPLAY "Distinction"
+  ELSE IF mark >= 65 and mark < 80 THEN
+    DISPLAY "Credit"
+  ELSE IF mark >= 40 and mark < 65 THEN
+    DISPLAY "Pass"
+  ELSE
+    DISPLAY "Fail"
+  END IF
+
+END PROGRAM
+
+---------------------------------
+
+BEGIN PROGRAM
+
+  Use Variable: mark OF TYPE Integer
+  DISPLAY "Enter your mark: "
+  ACCEPT mark
+  IF mark > 100 or mark < 0 THEN
+    DISPLAY "Invalid"
+  ELSE IF mark >= 80 and mark <= 100 THEN
+    DISPLAY "Distinction"
+  ELSE IF mark >= 65 and mark < 80 THEN
+    DISPLAY "Credit"
+  ELSE IF mark >= 40 and mark < 65 THEN
+    DISPLAY "Pass"
+  ELSE
+    DISPLAY "Fail"
+  END IF
+
+END PROGRAM
+
+---------------------------
+
+BEGIN PROGRAM
+
+  Use Variable: ch OF TYPE Charcter
+  DISPLAY 'Enter a letter: '
+  ACCEPT ch
+  IF ch="a" or ch="A" or ch="e" or ch="E" or ch="i" or ch="I" or ch="o" or ch="O" or ch="u" or ch="U" THEN
+    DISPLAY ch, " is vowel"
+  ELSE 
+    DISPLAY ch, " is not vowel"
+  END IF
+
+END PROGRAM
+
+-----------------------
+
+BEGIN PROGRAM 
+
+  Use Variable: num OF TYPE Integer
+  DISPLAY "Enter a number: "
+  ACCEPT num
+  IF num % 2 = 0 THEN
+    DISPLAY "This is even number."
+  ELSE 
+    DISPLAY "This is odd number."
+  END IF   
+
+END PROGRAM
+
+-----------------------
+
+BEGIN PROGRAM
+
+  Use Variable: num OF TYPE Integer
+  DISPLAY "Enter a number: "
+  ACCEPT num
+  If num > 0 THEN
+    DISPLAY "Positive"
+  ELSE IF num < 0 THEN
+    DISPLAY "Negative"
+  ELSE
+    DISPLAY "Zero"
+  END IF
+
+END PROGRAM
+
+------------------------
+
+BEGIN PROGRAM
+
+  Use Variable: num1, num2 OF TYPE Integer
+  DISPLAY "Enter a number: "
+  ACCEPT num1 
+  DISPLAY "Enter another number: "
+  ACCEPT num2 
+
+  IF num1 = num2 THEN
+    DISPLAY "They are equal"
+  ELSE IF num1 > num2 THEN
+    DISPLAY "Min: " , num2, "Max: ", num1 
+  ELSE 
+    DISPLAY "Min: " , num1, "Max: ", num2
+  END IF
+
+END PROGRAM
+
+----------------------------
+
+BEGIN PROGRAM
+
+  Use Variable: a, b, c OF TYPE Integer
+  DISPLAY "Enter three numbers: "
+  ACCEPT a, b, c
+  
+  IF a > b and b > c THEN
+    DISPLAY a, ">", b, ">", c
+  ELSE IF a > c and c > b THEN
+    DISPLAY a, ">", c, ">", b
+  ELSE IF b > a and a > c THEN
+    DISPLAY b, ">", a, ">", c
+  ELSE IF b > c and c > a THEN
+    DISPLAY b, ">", c, ">", a
+  ELSE IF c > a and a > b THEN
+    DISPLAY c, ">", a, ">", b
+  ELSE 
+    DISPLAY c, ">", b, ">", a
+  END IF
+
+END PROGRAM
+
+-------------------------------
+
+BEGIN PROGRAM
+
+  FOR (i := 0; i < 5; i+1) 
+    DISPLAY "Hello World", i
+  END FOR
+
+END PROGRAM
+
+-------------------------------
+
+BEGIN PROGRAM
+  
+  Use Variable: i OF TYPE Integer
+  i := 5
+  WHILE (i >= 1)
+    DISPLAY "Hello", i
+    i := i - 1
+  END WHILE 
+
+END PROGRAM
+						
+---------------------------------
+
+BEGIN PROGRAM
+
+  Use Variable: c OF TYPE Integer
+  c := 0
+  REPEAT
+    DISPLAY "Hello", c
+    c := c + 1
+  UNTIL (c > 5) 
+
+END PROGRAM
+
+---------------------------------
+
+BEGIN PROGRAM
+  
+  Use Variable: i OF TYPE Integer
+  FOR (i:=19; i<=27; i+2)
+    DISPLAY i
+  END FOR
+
+END PROGRAM
+
+------------------------------
+
+BEGIN PROGRAM
+
+  Use Variable: i OF TYPE Integer
+  i := 19
+  WHILE (i <=27) 
+    DISPLAY i
+    i := i + 2
+  END WHILE
+
+END PROGRAM
+
+-----------------------
+
+BEGIN PROGRAM
+
+  Use Variable: i OF TYPE Integer
+  FOR (i:=0; i < 9; i+1)
+    IF (i < 5)
+      DISPLAY 5 - i
+    ELSE
+      DISPLAY i - 3
+    END IF
+  END FOR
+
+END PROGRAM
+			
+-------------------------
+
+BEGIN PROGRAM 
+
+  Use Variable: i of TYPE Integer
+  FOR (i:=1; i<=10; i+1)
+    IF (i <= 5)
+      DISPLAY i * 2
+    ELSE
+      DISPLAY i * 3
+    END IF 
+  END FOR
+
+END PROGRAM
+
+---------------------------
+
+BEGIN PROGRAM
+
+  Use Variable: i OF TYPE Integer
+  FOR (i:=1; i < 10; i+1)
+    IF (i <= 5)
+      DISPLAY i
+    ELSE 
+      DISPLAY 10 - i
+    END IF
+  END FOR
+
+END PROGRAM 
+
+------------------------------
+
+BEGIN PROGRAM
+
+  Use Variable: i OF TYPE Integer
+  FOR (i:=1; i < 10; i+1)
+    IF (i <= 5)
+      DISPLAY i
+    ELSE 
+      DISPLAY i * 2 - 5
+    END IF
+  END FOR
+
+END PROGRAM
+				
+------------------------------
+
+BEGIN PROGRAM
+
+  Use Variable: i OF TYPE Integer
+  FOR (i:=1; i <= 5; i+1)
+    DISPLAY "3 * i = ", 3*i
+  END FOR
+
+END PROGRAM
+
+------------------------------
+
+BEGIN PROGRAM
+
+  Use Variable: i, input OF TYPE Integer
+  DISPLAY "Enter a number: "
+  ACCEPT input
+  FOR (i:=1; i <= 5; i+1)
+    DISPLAY input, " * i = ", input*i
+  END FOR
+
+END PROGRAM
+
+------------------------------
+
+BEGIN PROGRAM
+
+  Use Variable: i OF TYPE Integer
+  i := 21
+  WHILE (i <= 31)
+    DISPLAY i 
+    i := i+1 
+  END WHILE
+
+END PROGRAM
+
+------------------------------
+
+BEGIN PROGRAM
+
+  Use Variable: i, m, n, sum OF TYPE Integer
+  DISPLAY "Enter two numbers m and n (where m < n): "
+  ACCEPT m, n
+  sum := 0
+  FOR (i := m; i <= n; i+1)
+    sum := sum + i
+  END FORnm       
+
+  DISPLAY sum
+
+END PROGRAM
+
+------------------------------
+
+BEGIN PROGRAM
+
+  Use variable: count, a OF TYPE Integer
+                ch OF TYPE Character
+  count := 0
+  DISPLAY "Enter a character: "
+  ACCEPT ch
+  REPEAT
+    IF (ch <> "x")
+      count := count + 1
+      DISPLAY "Enter next character: "
+      ACCEPT ch
+  UNTIL (ch = "x")
+
+  DISPLAY count
+ 
+END PROGRAM
+
+--------------------------------
+
+BEGIN PROGRAM
+
+  Use Variable: a[2][3] ARRAY OF TYPE Integers
+                r, c OF TYPE Integers
+  FOR (r:=0; r<2; r+1) 
+    FOR (c:=0; c<3; c+1)
+      ACCEPT a[r][c]
+    END FOR
+  END FOR
+  FOR (r:=0; r<2; r+1) 
+    FOR (c:=0; c<3; c+1)
+      DISPLAY a[r][c]
+    END FOR
+  END FOR
+
+END PROGRAM
+
+-------------------------
+
+BEGIN PROGRAM 
+
+  Use Variable: a[10] ARRAY OF TYPE Integer
+                i, SearchNo, found OF TYPE Integer
+  found := 0
+  FOR (i:=0; i<10; i+1)
+    ACCEPT a[i]
+  END FOR
+  DISPLAY "Enter a number to be searched: "
+  ACCEPT SearchNo
+  FOR (i=0; i<10; i++)
+    IF SearchNo = a[i] THEN 
+      DISPLAY SearchNo, " Found at position ", i
+      found:=1
+    END IF
+  END FOR
+  IF found = 0 THEN
+    DISPLAY SearchNo, " not found"
+  END IF
+
+END PROGRAM
+
+-------------------------------
+
+BEGIN PROGRAM 
+
+  RECORD CustomerRecord HAS FIELDS CustomerNo: Integer
+                                   CustomerName: String
+                                   Address: String
+                                   Phone: String
+  MAIN PROGRAM
+    YangonCustomerReport // CALL PROCEDURE
+  END MAIN PROGRAM
+
+  PROCEDURE YangonCustomerReport 
+    Use Variable: CusRec OF TYPE CustomerRecord
+    OPEN Customer file
+    READ CusRec FROM Customer File
+    WHILE CusRec <> Nothing
+      IF CusRec.Address = "Yangon" THEN
+        DISPLAY CusRec.CustomerNo, CusRec.CustomerName, CusRec.Address, CusRec.Phone
+      END IF
+      READ CusRec FROM Customer File
+    END WHILE
+  END PROCEDURE
+
+END PROGRAM
+
+-------------------------
+
+BEGIN PROGRAM 
+
+  INTEGER FUNCTION Multiply(x, y OF TYPE Integer)
+    RETURN x * y
+  END FUNCTION
+
+  PROCEDURE Divide(x, y of TYPE INTEGER)
+    DISPLAY x, "/", y, "= ", x / y
+  END PROCEDURE
+
+  MAIN PROGRAM 
+    Use Variable: a, b OF TYPE Integer
+    DISPLAY "Enter two numbers: "
+    ACCEPT a, b
+    DISPLAY a, "*" , b, "= ", Multiply(a, b)
+    Divide(a, b)
+  END MAIN PROGRAM
+
+END PROGRAM
+
+
+
+
+
+
+
+
+
