@@ -1,0 +1,10 @@
+Helen|70
+Harry|90
+Zen|89
+Luc|78
+It|90
+H|9
+S|6
+N|7
+T|6
+I|0
